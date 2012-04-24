@@ -1,0 +1,42 @@
+<h2>编辑 <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-horizontal" }) do |f| %>
+  <%= devise_error_messages! %>
+	<fieldset>
+		<div class="control-group">
+  		<label class="control-label" for="input01"><%= f.label :email, "邮箱" %></label>
+			<div class="controls"><%= f.email_field :email %></div>
+		</div>	
+		<div class="control-group">
+  		<label class="control-label" for="input01"><%= f.label :password, "密码" %></label>
+			<div class="controls"><%= f.password_field :password, :autocomplete => "off" %></div>
+			<div class="controls"><i>(如果不想修改，保持空白)</i></div>
+		</div>
+		<div class="control-group">
+  		<label class="control-label" for="input01"><%= f.label :password_confirmation, "确认密码" %></label>
+			<div class="controls"><%= f.password_field :password_confirmation %></div>
+		</div>
+		<div class="control-group">
+  		<label class="control-label" for="input01"><%= f.label :current_password, "当前密码" %></label>
+			<div class="controls"><%= f.password_field :current_password %></div>
+			<div class="controls"><i>(需要当前密码来确认修改)</i></div>
+		</div>
+		<div class="controls">
+			<%#= f.submit "修改" %>
+			
+			<!--<h3>删除账号</h3>
+
+			<p>不高兴? <%#= link_to "将账号删除", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>-->
+
+			<%#= link_to "返回", :back %>
+		</div>	
+		<div class="form-actions">
+			 <div style="float: left; width: auto;">
+			 	<%= button_to "修改", "", :class => "btn btn-primary", :type => "submit" %>
+			 </div> 
+			 <div style="float: left; width: auto; margin-left:10px">
+			 	<%= button_to "返回", :back, :class => "btn" %>
+			 </div> 
+    </div>
+	</fieldset>
+<% end %>

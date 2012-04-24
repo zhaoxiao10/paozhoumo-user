@@ -1,0 +1,34 @@
+用户管理
+<%= notice %>
+<% if can? :update, @user %>  
+<table class="table table-bordered">
+  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th>用户邮箱</th>
+	      <th>登陆次数</th>
+	      <th>IP</th>
+	      <th>
+	      	权限
+	      </th>
+	      <th>
+	      	修改
+	      </th>
+	    </tr>
+	  </thead>
+	  <tbody>
+			<% @users.each do |user| %>
+	    <tr>
+	      <td><%= user.id%></td>
+	      <td><%= user.email%></td>
+	      <td><%= user.sign_in_count%></td>
+	      <td><%= user.last_sign_in_ip%></td>
+				<td><%= user.role.name%></td>
+				<td><a class="btn btn-primary" href="<%= admin_useredit_path(user)%>">
+					修改
+				</a></td>
+	    </tr>	
+			<% end %>
+	  </tbody>
+</table>
+<% end %>

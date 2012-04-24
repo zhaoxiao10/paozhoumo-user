@@ -1,0 +1,35 @@
+<div class="row show-grid">
+	<div class="span12">
+		<h6 class="span1 pull-left">用户登录</h6>
+	</div>
+</div>
+<div class="row show-grid">
+  <div class="span8">
+		<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class => "form-horizontal" }) do |f| %>
+		  <%= devise_error_messages! %>
+			<fieldset>
+				<legend>
+					忘记了密码?
+				</legend>
+				<div class="control-group">
+		      <label class="control-label" for="input01"><%= f.label "邮箱" %></label>
+		      <div class="controls">
+		        <%= f.email_field :email %>
+		        <!-- <p class="help-block">Supporting help text</p> -->
+		      </div>
+		    </div>	
+
+				<div class="form-actions">
+           <button type="submit" class="btn btn-primary">
+           	发给我重置密码
+           </button>
+           <button class="btn">
+           	取消
+           </button>
+         </div>
+				<%#= f.submit "登录" %>
+			</fieldset>
+		<% end %>
+	</div>
+  <%= render :partial => "devise/shared/links" %>
+</div>

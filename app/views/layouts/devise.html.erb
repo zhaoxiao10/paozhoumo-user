@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PaozhoumoUser</title>
+  <%= stylesheet_link_tag    "paozhoumo-user/application" %>
+	<%#= stylesheet_link_tag    "paozhoumo-user/bootstrap" %>
+  <%= javascript_include_tag "paozhoumo-user/application" %>
+  <%#= javascript_include_tag "paozhoumo-user/bootstrap" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="background-color: white;">	
+	<div class="navbar">
+	  <div class="navbar-inner">
+	    <div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				  <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </a>
+	      <a class="brand">
+				  泡周末
+				</a>
+				<ul class="nav">
+				  <li class="active">
+				    <a href="#">
+				    	主页
+				    </a>
+				  </li>
+				  <li class="divider-vertical"></li>
+				  <li><a href="#">热门</a></li>
+				  <li><a href="#">帮助</a></li>
+				</ul>
+				<div class="nav-collapse">
+					<form class="navbar-search pull-left">
+					  <input type="text" class="search-query" placeholder="搜索">
+					</form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+<div class="container">
+	<%= yield %>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<h2>编辑 <%#= resource_name.to_s.humanize %></h2>
+
+<%= form_for(@user, :url => admin_userupdate_path(@user), :html => { :method => :put, :class => "form-horizontal" }) do |f| %>
+  <%#= devise_error_messages! %>
+	<fieldset>
+		<div class="control-group">
+  		<label class="control-label" for="input01"><%= f.label :email, "邮箱" %></label>
+			<div class="controls"><%= @user.email %></div>
+		</div>
+		<div class="control-group">
+  		<label class="control-label" for="input01"><%= f.label :role_id, "权限" %></label>
+			<div class="controls"><%=  f.select(:role_id, PaozhoumoUser::Role.find(:all, :order => 'name').collect{|r| [r.name,r.id]}) %><%#= f.text_field :role_id %></div>
+		</div>
+		<div class="controls">
+			<%#= f.submit "修改" %>
+			
+			<!--<h3>删除账号</h3>
+
+			<p>不高兴? <%#= link_to "将账号删除", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>-->
+
+			<%#= link_to "返回", :back %>
+		</div>	
+		<div class="form-actions">
+			 <div style="float: left; width: auto;">
+			 	<%= button_to "修改", "", :class => "btn btn-primary", :type => "submit" %>
+			 </div> 
+			 <div style="float: left; width: auto; margin-left:10px">
+			 	<%= button_to "返回", :back, :class => "btn" %>
+			 </div> 
+    </div>
+	</fieldset>
+<% end %>

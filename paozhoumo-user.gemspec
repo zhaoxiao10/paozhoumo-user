@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = "zhaoxiao10"
   s.email       = "zhaoxiao10@gmail.com"
   s.platform    = Gem::Platform::RUBY
-  s.homepage    = "www.paozhoumo.com"
+  s.homepage    = "http://www.paozhoumo.com"
   s.summary     = "PaozhoumoUser Engine"
   s.description = "PaozhoumoUser Engine"
 

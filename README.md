@@ -43,21 +43,12 @@ change crontroller
 new models/ability.rb
 
     class Ability  
-      include CanCan::Ability  
-      def initialize(user)  
-  	    can :manage, :all  
-      end  
-    end
-
-##测试
-登录到加filter的crontroller,新建一个用户,访问admin/userlist更新用户为管理员,退出
-
-modify models/ability.rb
-
-    def initialize(user)
-       if user.role.name == 'admin'|| user.role.name == 'owner'
-         can :manage, :all
-       else
-         can :read, :all
-       end
-     end
+		  include CanCan::Ability  
+		  def initialize(user)
+		     if !user.nil? && (user.role.name == 'admin'|| user.role.name == 'owner')
+		       can :manage, :all
+		     else
+		       can :read, :all
+		     end
+		   end
+		end

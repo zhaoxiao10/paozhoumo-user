@@ -9,7 +9,7 @@ mountable engine for user
 
 ##Init devise
 
-		gem 'devise', :git => 'git://github.com/zhaoxiao10/devise.git'
+    gem 'devise', :git => 'git://github.com/zhaoxiao10/devise.git'
     rails g devise:install
 
 ## Mount paozhoumo_user
@@ -18,18 +18,7 @@ add Gemfile
     gem 'paozhoumo-user', :git => 'git://github.com/zhaoxiao10/paozhoumo-user.git'
     gem 'omniauth-weibo', :git => 'git://github.com/ballantyne/omniauth-weibo.git'
 
-remove Gemfile
-
-    gem 'devise'
-
 ##DB
-
-change db/seeds.rb
-
-    PaozhoumoUser::Role.create!(:name => 'admin')
-    PaozhoumoUser::Role.create!(:name => 'owner')
-    PaozhoumoUser::Role.create!(:name => 'user')
-
 mount db
 
     rake db:create

@@ -19,6 +19,11 @@ add Gemfile
     gem 'omniauth-weibo', :git => 'git://github.com/ballantyne/omniauth-weibo.git'
 
 ##DB
+
+add db/seeds.rb
+
+    PaozhoumoUser::Engine.load_seed
+
 mount db
 
     rake db:create

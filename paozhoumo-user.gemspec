@@ -7,14 +7,14 @@ require "paozhoumo-user/version"
 Gem::Specification.new do |s|
   s.name        = "paozhoumo-user"
   s.version     = PaozhoumoUser::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
+  s.authors     = "zhaoxiao10"
+  s.email       = "zhaoxiao10@gmail.com"
   s.platform    = Gem::Platform::RUBY
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of PaozhoumoUser."
-  s.description = "TODO: Description of PaozhoumoUser."
+  s.homepage    = "www.paozhoumo.com"
+  s.summary     = "PaozhoumoUser Engine"
+  s.description = "PaozhoumoUser Engine"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
   # s.add_dependency "jquery-rails"
 

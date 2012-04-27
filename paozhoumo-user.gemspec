@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.version     = PaozhoumoUser::VERSION
   s.authors     = ["TODO: Your name"]
   s.email       = ["TODO: Your email"]
+  s.platform    = Gem::Platform::RUBY
   s.homepage    = "TODO"
   s.summary     = "TODO: Summary of PaozhoumoUser."
   s.description = "TODO: Description of PaozhoumoUser."

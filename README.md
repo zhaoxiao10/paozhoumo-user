@@ -9,7 +9,7 @@ mountable engine for user
 
 ##Init devise
 
-    gem 'devise'
+		gem 'devise', :git => 'git://github.com/zhaoxiao10/devise.git'
     rails g devise:install
 
 ## Mount paozhoumo_user
@@ -17,7 +17,6 @@ add Gemfile
 
     gem 'paozhoumo-user', :git => 'git://github.com/zhaoxiao10/paozhoumo-user.git'
     gem 'omniauth-weibo', :git => 'git://github.com/ballantyne/omniauth-weibo.git'
-		gem 'devise', :git => 'git://github.com/zhaoxiao10/devise.git'
 
 remove Gemfile
 
